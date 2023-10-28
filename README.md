@@ -4,7 +4,9 @@ This is a test project to try out Facebook's [StyleX](https://stylex-docusaurus.
 
 ## Installation Journey
 
-Installed the latest version of StyleX:
+### Step 1
+
+Installed the beta version of StyleX:
 
 ```bash
 bun i @stylexjs/stylex@beta
@@ -17,3 +19,11 @@ Uncaught Error: stylex.create should never be called. It should be compiled away
 ```
 
 I tried building the app with Vite, adjusted the html to point to local files (i.e. `/file.js` => `./file.js`), and still received the same error from StyleX. So far this all seems expected since I haven't introduced any StyleX-specific build steps yet.
+
+### Step 2
+
+Installed the beta version of the StyleX Rollup plugin:
+
+```bash
+bun i -D @stylexjs/rollup-plugin@beta
+```

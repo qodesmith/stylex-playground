@@ -1,9 +1,12 @@
 import {useState} from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
-import {create, props} from '@stylexjs/stylex'
+// import './App.css'
+import * as stylex from '@stylexjs/stylex'
 
+const {create, props} = stylex
+
+console.log(create.toString())
 const styles = create({
   h1: {
     color: 'cornflowerblue',

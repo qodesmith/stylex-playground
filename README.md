@@ -33,3 +33,29 @@ Starting the dev server produced an error about a missing page. I went through t
 - `@babel/plugin-syntax-flow`
 - `@babel/plugin-syntax-jsx`
 - `@babel/plugin-syntax-typescript`
+
+### Step 3
+
+The dev server now started up, but a new error was encountered:
+
+```
+[plugin:vite:import-analysis] Failed to resolve import "stylex" from "src/App.tsx". Does the file exist?
+
+/Users/qodesmith/repos/stylex-playground/src/App.tsx:7:22
+21 |  import "./App.css";
+22 |  import { create, props } from "@stylexjs/stylex";
+23 |  import __stylex__ from "stylex";
+   |                          ^
+24 |  __stylex__.inject(".xy1xwxi{color:cornflowerblue}", 3000);
+25 |  function App() {
+```
+
+### Step 4
+
+Running into so many errors, I tried going the route of installing the runtime, which alleviates you to start using StyleX without having to configure a compiler or build process:
+
+```
+bun i -D @stylexjs/dev-runtime
+```
+
+This also didn't work.
